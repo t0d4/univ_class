@@ -1,3 +1,11 @@
+""""
+Conduct the MonteCarlo method. Elements of coordinates
+are decimal between 0(included) and 10(excluded)
+----------------
+Requirements:
+    - matplotlib
+    - numpy
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 

@@ -1,3 +1,11 @@
+"""
+Conduct the MonteCarlo method, limiting elements of coordinates
+to integers between 1(included) and 10(included).
+----------------
+Requirements:
+    - matplotlib
+    - numpy
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 

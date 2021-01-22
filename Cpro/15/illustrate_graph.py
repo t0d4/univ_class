@@ -42,7 +42,6 @@ def plot_animation_updater(i: int, datalist: list, color_codes: list, limits: li
     if remove_trace is True:
         plt.cla()
 
-    print(i, datalist[0]["time_and_coordinates"][i])
     plt.xlim(0, limits[0]*1.3)
     plt.ylim(0, limits[1]*1.1)
     for data, color in zip(datalist, color_codes):

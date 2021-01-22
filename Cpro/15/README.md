@@ -3,8 +3,7 @@
 
 注) v_30_degree_20.csvは, 初速度v=30[m/s], 射出角度theta=30[degree]の意味.
 
-<img src=graph.png width="40%">
-<img src=animation.gif width="40%">
+<img src=graph.png width="40%"> <img src=animation.gif width="40%">
 
 ## Usage:
  python illustrate_graph.py [CSV filenames separated by space] {options}

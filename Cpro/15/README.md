@@ -12,12 +12,12 @@
  Note) v_30_degree_20.csv means that the ball was thrown at 30[m/s] and the elevation angle was 20[degree].
 
 ## Usage:
- python illustrate_graph.py [CSV filenames separated by space] {options}
+ `python illustrate_graph.py [CSV filenames separated by space] {options}`
 
  Options:
- - --export-png: export graph as a png file
- - --export-gif: export animation as a gif file
- - --remove-trace: remove trace in animation. Must be used with --export-gif
+ - `--export-png`: export graph as a png file
+ - `--export-gif`: export animation as a gif file
+ - `--hide-trace`: hide trace in animation. Must be used with --export-gif
 
 ## Requirements:
   - numpy

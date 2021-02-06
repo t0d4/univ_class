@@ -8,7 +8,7 @@ Usage:
 Options:
     --export-png: export graph as a png file
     --export-gif: export animation as a gif file
-    --remove-trace: remove trace in animation. Must be used with --export-gif
+    --hide-trace: hide trace in animation. Must be used with --export-gif
 """
 import os
 import sys
@@ -37,9 +37,9 @@ def init():
     pass
 
 
-def plot_animation_updater(i: int, datalist: list, color_codes: list, limits: list, remove_trace: bool = False):
+def plot_animation_updater(i: int, datalist: list, color_codes: list, limits: list, hide_trace: bool = False):
 
-    if remove_trace is True:
+    if hide_trace is True:
         plt.cla()
 
     plt.xlim(0, limits[0]*1.3)
@@ -99,7 +99,7 @@ def main(files: list, config: dict):
     ani = anm.FuncAnimation(
                                 animation_figure,
                                 plot_animation_updater,
-                                fargs=(datalist, color_codes, [x_max, y_max], config["remove_trace"]),
+                                fargs=(datalist, color_codes, [x_max, y_max], config["hide_trace"]),
                                 init_func=init,  # Do nothing
                                 interval=100,
                                 frames=animation_frames
@@ -114,12 +114,12 @@ if __name__ == '__main__':
     parser.add_argument("files", nargs="+", help="csv file names, separated by spaces")
     parser.add_argument("--export-png", help="Export graph as a png file", action="store_true")
     parser.add_argument("--export-gif", help="Export animation as a gif file", action="store_true")
-    parser.add_argument("--remove-trace", help="Not display the trace", action="store_true")
+    parser.add_argument("--hide-trace", help="Not display the trace", action="store_true")
     args = parser.parse_args()
     config = {
                 "export_png": args.export_png,
                 "export_gif": args.export_gif,
-                "remove_trace": args.remove_trace
+                "hide_trace": args.hide_trace
              }
 
     if len(args.files) > len(COLORS):
